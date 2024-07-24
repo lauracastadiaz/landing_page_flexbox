@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lora', serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.padre{
+
+    display: flex;
+    flex-flow: column nowrap; /* en columnas y que se adapte segun el tamaño establecido*/
+}
+
+.margen-interno{
+    padding: 0 50px;
+}
+    /*HEADER */
+    .header{
+        background: url(imagenes/fondo-humano-apreton-manos-robot-era-digital-futurista.jpg);
+        background-position: center;
+        background-attachment: contain;
+        background-size: cover;
+        display:flex;
+        flex-flow: column nowrap; /*que el menú este separado del texto principal y se muestren uno debajo de otro */
+    }
+
+        .menu{
+            background: rgba(0, 0, 0, .1);
+            display: flex;
+            flex-flow: row nowrap;
+            height: 60px;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, .5);
+            
+        }
+            .logo{
+                
+                flex: 1 1 auto;
+             
+            }
+                .logo a{
+                    color: antiquewhite;
+                    text-decoration: none;
+                }
+
+                .logo a:hover{
+                    color: aliceblue;
+                    font-size: 20px;
+                }
+            .nav{
+                
+                flex: 5 1 auto;
+                
+            }
+
+            .nav a{
+                color:antiquewhite;
+                font-size: 11px;
+                text-transform: uppercase;
+                padding: 0 10px;
+                letter-spacing: 2px;
+            }
+
+            .nav a:hover{
+                color: aliceblue;
+            }
+
+            .social{
+               
+                flex: 1 1 auto;
+                display: flex;
+                
+            }
+
+
+            .social a{
+                font-size: 18px;
+                color: #fff;
+                padding: 0 5px;
+            }
+
+            .social a:hover{
+                color: #343434;
+
+            }
+
+        .texto-principal{
+           /*background: #A4D0A4;*/
+           height: 580px;
+           display: flex;
+           align-items: center;
+        }
+            h1{
+                font-family: 'Lora', serif;
+                font-size: 20px;
+                color: #fff;
+                font-weight: 300;
+                text-align: center;
+                line-height: 1.6;
+            }
+        
+
+    /* SECCIÓN */
+    .section{
+        background: #f7f7f7;
+        display: flex;
+    }
+
+        .articulos{
+            background: #F7f7f7;
+            flex: 2 1 auto;
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+            .article{
+                flex: 1 1 40%;
+                color: #444;
+                font-size: 13px;
+                letter-spacing: 1px;
+                margin: 10px 10px 0 0px;
+                flex: 1 1 45%;
+                background: #ececec;
+            }
+
+            .article img{
+                width: 100%;
+            }
+
+            .article a{
+                color: #fff;
+                font-size: 13px;
+                padding: 10px;
+                background: #CEE6F3;
+                margin: 10px 0;
+                display: inline-block;
+            }
+
+            .article a:hover{
+                background: #546cc3;
+            }
+
+            .article p{
+                margin: 10px;
+            }
+
+            h3{
+                color: #fff;
+                font-size: 13px;
+                padding: 10px 0;
+                margin-top: -80px;
+                margin-left: 10px;
+            }
+            h2{
+                font-size: 20px;
+                text-transform: uppercase;
+                padding: 0px 0 10px 0;
+                margin: 10px;
+                color: #fff;
+            }
+
+            .navegacion{
+                background: #91C8E4;
+                flex: 1 1 100%;
+                margin: 10px 10px 0 0px;
+            }
+
+            .navegacion a{
+                color: #fff;
+                font-size: 11px;
+                text-transform: uppercase;
+                padding: 0 10px;
+                letter-spacing: 2px;
+            }
+        .aside{
+           /* background: #f18c90;*/
+            flex: 1 1 auto;
+            margin: 10px 5px 10px 0;
+            
+
+        }
+
+        .aside img{
+            width: 100%;
+        }
+
+
+        h4{
+            background: #1D5B79;
+            color: #fff;
+            padding: 10px; 
+            text-transform: uppercase;
+         }
+            /*.publicidad{
+              background: #BE5A83 ;  
+            }*/
+
+
+
+    .footer{
+        background: #001C30;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+        .pie{
+            /*background: #751562;*/
+            text-align: center;
+            
+            
+        }
+
+        .pie a{
+            color: #fff;
+            font-size: 11px;
+            text-transform: uppercase;
+            padding: 0 10px;
+            letter-spacing: 2px;
+        }
+
+
+@media all and (max-width: 1120px){
+    .section{
+        flex-direction: column;
+    }
+
+    .menu{
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .aside{
+        display: flex;
+        justify-content: center;
+    }
+    
+    h1{
+        font-size: 15px;
+    }
+
+    .texto-principal{
+        height: 450px;
+    }
+}
+
+@media all and (max-width: 762px){
+
+    .articulos{
+        flex-direction: column;
+    }
+
+    h1{
+
+        font-size: 15px;
+    }
+}
+
+@media all and (max-width: 650px){
+
+    .off{ 
+        display: none; }
+    .nav a{ 
+        font-size: 20px; }
+
+}
+
+@media all and (max-width: 400px){
+    .aside{
+        flex-direction: column;
+    }
+}
